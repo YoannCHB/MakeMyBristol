@@ -1,6 +1,36 @@
+@page { 
+    size : landscape;
+} 
+
+@media print {
+    body * {
+        display:none;
+    }
+    #fiche1 { 
+        display:block;
+    }
+
+    #fiche2 { 
+        display:block;
+    }
+
+    .titreFeuille {
+        display: block;
+    }
+
+    .zonedetexte {
+        display: block;
+    }
+}
+
 body{
     background: #008CBA;
-    overflow: hidden;
+	overflow: hidden;
+}
+
+p{
+    line-height: 18px;
+    margin: 0;
 }
 
 .menu{
@@ -65,7 +95,6 @@ body{
     left: 31%;
     height: 74%;
     width: 25%;
-    line-height: 18px;
     overflow: hidden;
     text-align: left;
 }

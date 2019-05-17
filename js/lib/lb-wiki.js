@@ -32,6 +32,6 @@ Wiki.prototype.research = function(s, callback) { //On définie la fonction pour
 function wikipedia(recherche) {
 	var wiki = new Wiki(lang);
 	wiki.research(recherche, function(resultat) {
-		zone.innerHTML += "<p>"+resultat[2][0]+"</p>"; //écriture de la phrase
+		zone.innerHTML += "<br><p>"+resultat[2][0]+"</p><br>"; //écriture de la phrase
 	});
 }
