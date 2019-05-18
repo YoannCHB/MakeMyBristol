@@ -43,6 +43,8 @@ function validevocal(){
 		var speech =  window.SpeechRecognition || window.webkitSpeechRecognition || SpeechRecognition; //L'ELEMENTS DEPEND DU NAVIGATEUR DONC ON VERIFIE LEQUELLE CORRESPOND
 		vocal = new speech(); //ON CREE L'ELEMENT
 		vocal.continuous = true; //ON FAIT A CE QU'IL NE S'ARRETE JAMAIS (SINON IL S'ARRETE A CHAQUE PHRASE)
+		vocal.interimResults = false;
+		vocal.maxAlternatives = 1;
 		vocal.onresult = function(event){ //SI ON A UN RESULTAT
 			ai(event.results[event.results.length-1][0].transcript.toLowerCase()); //ON LANCE LA FONTION AI AVEC LE RESULTAT SOUS FORME DE TEXTE
 		} //FIN FONCTION
@@ -70,7 +72,10 @@ function ai(phrase){
 			titre(phrase.replace("hashtag mets en titre", ""));
 			phrase = false;
 		}
-		
+
+		if(word[n]+" "+word[n+1]+" "+word[n+2]+" "+word[n+3] == "hashtag à la ligne"){
+			phrase = "<br>";
+		}
 		
 		if(word[n] == "tiret"){      // Définition du mot  
 			phrase = phrase.replace("tiret", "-");//  remplacement du mot par le caractere
