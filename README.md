@@ -2,7 +2,7 @@
 Create your own bristol paper with the vocal !
 
 In beta test: v.0.0.1
-The website: https://yoannchb.github.io/MakeMyBristol/index.html
+The website: https://yoannchb.github.io/MakeMyBristol
 
 --------------------------------------------
 
